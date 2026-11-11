@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title description">
+  <title id="title">Portfolio image placeholder</title>
+  <desc id="description">Abstract paper-colored field with a violet grid and LLULL placeholder label.</desc>
+  <rect width="1600" height="1000" fill="#d8d6ca"/>
+  <path d="M0 200h1600M0 400h1600M0 600h1600M0 800h1600M320 0v1000M640 0v1000M960 0v1000M1280 0v1000" stroke="#0a0a0a" stroke-opacity=".13"/>
+  <circle cx="800" cy="500" r="248" fill="none" stroke="#756cff" stroke-width="2"/>
+  <circle cx="800" cy="500" r="172" fill="none" stroke="#0a0a0a" stroke-opacity=".3"/>
+  <path d="M652 572V428l148 144V428" fill="none" stroke="#0a0a0a" stroke-width="18" stroke-linecap="square" stroke-linejoin="miter"/>
+  <text x="800" y="860" fill="#0a0a0a" font-family="monospace" font-size="28" letter-spacing="5" text-anchor="middle">PROJECT IMAGE PLACEHOLDER</text>
+</svg>

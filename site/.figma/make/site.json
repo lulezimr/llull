@@ -1,0 +1,7 @@
+{
+  "description": "Displays the complete original content exactly as provided, preserving every character and punctuation mark.",
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

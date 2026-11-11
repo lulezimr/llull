@@ -455,15 +455,14 @@ function VisualIdentitiesPage() {
     event: ReactPointerEvent<HTMLDivElement>,
   ) => {
     if (
-      event.pointerType !== "mouse" ||
       window.matchMedia("(prefers-reduced-motion: reduce)").matches
     ) {
       return
     }
 
     const bounds = event.currentTarget.getBoundingClientRect()
-    const x = ((event.clientX - bounds.left) / bounds.width - 0.5) * 6
-    const y = ((event.clientY - bounds.top) / bounds.height - 0.5) * 6
+    const x = ((event.clientX - bounds.left) / bounds.width - 0.5) * 20
+    const y = ((event.clientY - bounds.top) / bounds.height - 0.5) * 20
 
     const rings = event.currentTarget.querySelector<HTMLElement>(
       ".portfolio-project-image__rings--identity",
@@ -580,6 +579,9 @@ function VisualIdentitiesPage() {
                   className="portfolio-project-image portfolio-project-image--identity"
                   onPointerMove={handleProjectPointerMove}
                   onPointerLeave={handleProjectPointerLeave}
+                  onPointerDown={handleProjectPointerMove}
+                  onPointerUp={handleProjectPointerLeave}
+                  onPointerCancel={handleProjectPointerLeave}
                 >
                   <img src={project.coverImage} alt={project.coverAlt} />
                   <span
@@ -845,7 +847,7 @@ function HomePage() {
         <div className="hero-grid" aria-hidden="true" />
         <div className="hero-meta">
           <span>DESIGNER / VISUAL ARTIST / MUSICIAN</span>
-          <span>45.2671° N / 19.8335° E</span>
+          <span>42.66667° N / 21.16667° E</span>
           <span>SIGNAL {playing ? "LIVE" : "IDLE"}</span>
         </div>
         <h1 id="hero-title" className="hero-statement">

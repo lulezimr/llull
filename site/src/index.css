@@ -940,6 +940,17 @@ footer > h2 em {
   text-decoration: none;
   text-transform: uppercase;
   border: 1px solid rgba(233, 232, 223, 0.45);
+  transition:
+    border-color 350ms ease,
+    background 350ms ease,
+    transform 350ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  border-color: rgba(117, 108, 255, 0.7);
+  background: rgba(117, 108, 255, 0.12);
+  transform: translateY(-0.15rem);
 }
 
 .social-brand {
@@ -2117,5 +2128,71 @@ footer address span {
     right: max(0.75rem, env(safe-area-inset-right));
     width: 2.8rem;
     height: 2.8rem;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .portfolio-project-card:active .portfolio-project-image__rings--identity {
+    --outer-scale: 1.06;
+  }
+  .portfolio-project-card:active .portfolio-project-image__rings--identity::before {
+    --middle-scale: 1.08;
+  }
+  .portfolio-project-card:active .portfolio-project-image__rings--identity::after {
+    --inner-scale: 1.1;
+  }
+}
+
+
+/* Visual identity rings: expressive autonomous movement */
+.portfolio-project-image--identity {
+  touch-action: pan-y;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .portfolio-project-image__rings--identity {
+    animation: identity-ring-drift-outer 6.2s ease-in-out infinite;
+  }
+
+  .portfolio-project-image__rings--identity::before {
+    animation: identity-ring-drift-middle 5.1s ease-in-out infinite;
+  }
+
+  .portfolio-project-image__rings--identity::after {
+    animation: identity-ring-drift-inner 4.4s ease-in-out infinite;
+  }
+
+  @keyframes identity-ring-drift-outer {
+    0%   { translate: 0 0; scale: 1; }
+    25%  { translate: 10px -7px; scale: 1.015; }
+    50%  { translate: 4px 11px; scale: 1; }
+    75%  { translate: -9px 5px; scale: 1.02; }
+    100% { translate: 0 0; scale: 1; }
+  }
+
+  @keyframes identity-ring-drift-middle {
+    0%   { translate: 0 0; scale: 1; }
+    25%  { translate: -9px 7px; scale: 1.025; }
+    50%  { translate: 10px 8px; scale: 0.985; }
+    75%  { translate: 5px -10px; scale: 1.02; }
+    100% { translate: 0 0; scale: 1; }
+  }
+
+  @keyframes identity-ring-drift-inner {
+    0%   { translate: 0 0; scale: 1; }
+    25%  { translate: 6px 9px; scale: 1.035; }
+    50%  { translate: -7px 4px; scale: 0.97; }
+    75%  { translate: -5px -8px; scale: 1.025; }
+    100% { translate: 0 0; scale: 1; }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-project-image__rings--identity,
+  .portfolio-project-image__rings--identity::before,
+  .portfolio-project-image__rings--identity::after {
+    animation: none;
+    translate: 0 0;
+    scale: 1;
   }
 }

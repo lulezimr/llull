@@ -919,6 +919,10 @@ footer > h2 {
   font-size: clamp(3.78rem, 9.18vw, 10.35rem);
 }
 
+footer > h2 em {
+  margin-right: 0.2em;
+}
+
 .footer-links {
   display: flex;
   gap: 0.7rem;
@@ -1148,6 +1152,26 @@ footer address span {
 }
 
 @media (max-width: 620px) {
+  :root {
+    --heading-line-height: 1.04;
+  }
+
+  .hero-statement,
+  .work-heading h2,
+  .sound-title h2,
+  .about > h2,
+  footer > h2 {
+    line-height: var(--heading-line-height);
+  }
+
+  .hero-statement em,
+  .work-heading h2 em,
+  .sound-title h2 em,
+  .about > h2 em,
+  footer > h2 em {
+    line-height: inherit;
+  }
+
   nav {
     top: 3.65rem;
     right: var(--pad);
@@ -1266,7 +1290,6 @@ footer address span {
     left: 50%;
     width: calc(100% - 2.2rem);
     font-size: clamp(3.42rem, 17.37vw, 5.58rem);
-    line-height: 0.92;
     text-align: left;
     transform: translate(-50%, -50%);
   }
@@ -1307,30 +1330,16 @@ footer address span {
   }
 
   .work-heading h2 {
+    max-width: 90%;
     font-size: clamp(3.145rem, 15.3vw, 5.1rem);
-    line-height: 0.98;
-  }
-
-  .work-heading h2::first-line {
-    line-height: 1.12;
   }
 
   .sound-title h2 {
     font-size: clamp(3.145rem, 15.3vw, 5.1rem);
-    line-height: 0.88;
-  }
-
-  .sound-title h2::first-line {
-    line-height: 0.88;
   }
 
   .about > h2 {
     font-size: clamp(3.145rem, 15.3vw, 5.1rem);
-    line-height: 0.88;
-  }
-
-  .about > h2::first-line {
-    line-height: 0.88;
   }
 
   .edition {
@@ -1453,11 +1462,6 @@ footer address span {
 
   footer > h2 {
     font-size: clamp(3.145rem, 15.3vw, 5.1rem);
-    line-height: 0.98;
-  }
-
-  footer > h2::first-line {
-    line-height: 1.12;
   }
 
   .footer-links {

@@ -1567,6 +1567,10 @@ footer address span {
   font-weight: 400;
 }
 
+.portfolio-heading h1 {
+  font-size: clamp(3.78rem, 9.18vw, 10.35rem);
+}
+
 .portfolio-heading .edition {
   font-size: 0.62rem;
   line-height: 1.5;
@@ -1870,6 +1874,15 @@ footer address span {
   .portfolio-heading h1,
   .portfolio-project-intro h1 {
     font-size: clamp(3.7rem, 18vw, 6rem);
+  }
+
+  .portfolio-heading h1 {
+    font-size: clamp(3.145rem, 15.3vw, 5.1rem);
+    line-height: var(--heading-line-height);
+  }
+
+  .portfolio-heading h1 em {
+    line-height: inherit;
   }
 
   .portfolio-heading .edition {

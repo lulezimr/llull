@@ -15,6 +15,13 @@ const tracks = [
     image: "/media/music-cover.png",
   },
   {
+    id: "ZYm_3KhlLcI",
+    title: "A Dried-Up Sea",
+    type: "Single",
+    duration: "—",
+    image: "https://i.ytimg.com/vi/ZYm_3KhlLcI/hqdefault.jpg",
+  },
+  {
     id: "PH1_CMg51JU",
     title: "Numb",
     type: "Single",
@@ -969,7 +976,7 @@ function HomePage() {
           <div className="track-panel">
             <div className="track-panel-head">
               <span>Index / audio works</span>
-              <span>04 tracks</span>
+              <span>05 tracks</span>
             </div>
             {tracks.map((item, index) => (
               <button

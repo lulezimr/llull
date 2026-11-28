@@ -19,7 +19,7 @@ const tracks = [
     title: "A Dried-Up Sea",
     type: "Single",
     duration: "—",
-    image: "https://i.ytimg.com/vi/ZYm_3KhlLcI/hqdefault.jpg",
+    image: "https://i.ytimg.com/vi/ZYm_3KhlLcI/maxresdefault.jpg",
   },
   {
     id: "PH1_CMg51JU",

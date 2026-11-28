@@ -8,18 +8,18 @@ import { visualIdentityProjects } from "./data/visualIdentityProjects"
 
 const tracks = [
   {
-    id: "L31JqlgTl3w",
-    title: "Fading Out Inside",
-    type: "Single",
-    duration: "3:27",
-    image: "/media/music-cover.png",
-  },
-  {
     id: "ZYm_3KhlLcI",
     title: "A Dried-Up Sea",
     type: "Single",
     duration: "—",
     image: "https://i.ytimg.com/vi/ZYm_3KhlLcI/maxresdefault.jpg",
+  },
+  {
+    id: "L31JqlgTl3w",
+    title: "Fading Out Inside",
+    type: "Single",
+    duration: "3:27",
+    image: "/media/music-cover.png",
   },
   {
     id: "PH1_CMg51JU",
